@@ -43,7 +43,7 @@ export default function Home() {
 					(modAngle.toFixed(2)) + '\u00b0'
 				
 				for(var i = 1; i < dict.length; i++){
-					if(modAngle > dict[i-1].max && lastname < dict[i].max){
+					if(modAngle > dict[i-1].max && modAngle < dict[i].max){
 						angleLetter.innerHTML = dict[i].dir;
 					}
 				}
