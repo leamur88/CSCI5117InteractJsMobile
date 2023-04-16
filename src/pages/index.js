@@ -35,16 +35,17 @@ export default function Home() {
 				{ max: 348.75, dir: 'NNW' },
 				{ max: 360, dir: 'N' }
 			];
-			const modAngle = angle.toFixed(2) % 360
+			
+
+			arrow.style.transform = 'rotate(' + angle + 'deg)'
+			const modAngle = (angle % 360)
 			for(var i = 1; i < dict.length; i++){
 				if(modAngle > dict[i-1].max && lastname < dict[i].max){
 					angleLetter.innerHTML = dict[i].dir;
 				}
 			}
-
-			arrow.style.transform = 'rotate(' + angle + 'deg)'
 			document.getElementById('angle-info').textContent =
-				(modAngle) + '\u00b0'
+				(modAngle.toFixed(2) ) + '\u00b0'
 			}
 		}
 		})
