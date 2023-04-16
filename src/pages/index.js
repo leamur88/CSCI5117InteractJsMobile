@@ -38,6 +38,7 @@ export default function Home() {
 
 				arrow.style.transform = 'rotate(' + angle + 'deg)'
 				const modAngle = (angle % 360)
+				console.log(angle, modAngle)
 				document.getElementById('angle-info').textContent =
 					(modAngle.toFixed(2)) + '\u00b0'
 				
