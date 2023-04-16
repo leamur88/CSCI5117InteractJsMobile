@@ -7,46 +7,46 @@ import { useEffect } from 'react'
 export default function Home() {
 	useEffect(() => {
 		var angle = 0
-		var dir = 'N'
+		// var dir = 'N'
 
 		interact('#rotate-area').gesturable({
 		listeners: {
 			move (event) {
-			var arrow = document.getElementById('arrow')
-			var angleLetter = document.getElementById('angle-letter')
+				var arrow = document.getElementById('arrow')
+				// var angleLetter = document.getElementById('angle-letter')
 
-			angle += event.da
-			var dict = [
-				{ max: 11.25, dir: 'N' },
-				{ max: 33.75,  dir: 'NNE' },
-				{ max: 56.25,  dir: 'NE' },
-				{ max: 78.75, dir: 'ENE' },
-				{ max: 101.25,  dir: 'E' },
-				{ max: 123.75,  dir: 'ESE' },
-				{ max: 146.25, dir: 'SE' },
-				{ max: 168.75,  dir: 'SSE' },
-				{ max: 191.25, dir: 'S' },
-				{ max: 213.75,  dir: 'SSW' },
-				{ max: 236.25, dir: 'SW' },
-				{ max: 258.75,  dir: 'WSW' },
-				{ max: 281.25, dir: 'W' },
-				{ max: 303.75, dir: 'WNW' },
-				{ max: 326.25,  dir: 'NW' },
-				{ max: 348.75, dir: 'NNW' },
-				{ max: 360, dir: 'N' }
-			];
+				angle += event.da
+				// var dict = [
+				// 	{ max: 11.25, dir: 'N' },
+				// 	{ max: 33.75,  dir: 'NNE' },
+				// 	{ max: 56.25,  dir: 'NE' },
+				// 	{ max: 78.75, dir: 'ENE' },
+				// 	{ max: 101.25,  dir: 'E' },
+				// 	{ max: 123.75,  dir: 'ESE' },
+				// 	{ max: 146.25, dir: 'SE' },
+				// 	{ max: 168.75,  dir: 'SSE' },
+				// 	{ max: 191.25, dir: 'S' },
+				// 	{ max: 213.75,  dir: 'SSW' },
+				// 	{ max: 236.25, dir: 'SW' },
+				// 	{ max: 258.75,  dir: 'WSW' },
+				// 	{ max: 281.25, dir: 'W' },
+				// 	{ max: 303.75, dir: 'WNW' },
+				// 	{ max: 326.25,  dir: 'NW' },
+				// 	{ max: 348.75, dir: 'NNW' },
+				// 	{ max: 360, dir: 'N' }
+				// ];
 
-			arrow.style.transform = 'rotate(' + angle + 'deg)'
-			document.getElementById('angle-info').textContent =
-				(modAngle.toFixed(2)) + '\u00b0'
+				arrow.style.transform = 'rotate(' + angle + 'deg)'
+				document.getElementById('angle-info').textContent =
+					(modAngle.toFixed(2)) + '\u00b0'
 
-				
-			const modAngle = (angle % 360)
-			for(var i = 1; i < dict.length; i++){
-				if(modAngle > dict[i-1].max && lastname < dict[i].max){
-					angleLetter.innerHTML = dict[i].dir;
-				}
-			}
+					
+				// const modAngle = (angle % 360)
+				// for(var i = 1; i < dict.length; i++){
+				// 	if(modAngle > dict[i-1].max && lastname < dict[i].max){
+				// 		angleLetter.innerHTML = dict[i].dir;
+				// 	}
+				// }
 			
 			}
 		}
