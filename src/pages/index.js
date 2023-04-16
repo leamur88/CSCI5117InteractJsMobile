@@ -35,7 +35,8 @@ export default function Home() {
 				{ max: 348.75, dir: 'NNW' },
 				{ max: 360, dir: 'N' }
 			];
-			
+			document.getElementById('angle-info').textContent =
+				(modAngle.toFixed(2)) + '\u00b0'
 
 			arrow.style.transform = 'rotate(' + angle + 'deg)'
 			const modAngle = (angle % 360)
@@ -44,8 +45,7 @@ export default function Home() {
 					angleLetter.innerHTML = dict[i].dir;
 				}
 			}
-			document.getElementById('angle-info').textContent =
-				(modAngle.toFixed(2) ) + '\u00b0'
+			
 			}
 		}
 		})
