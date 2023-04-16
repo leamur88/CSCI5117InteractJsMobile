@@ -37,11 +37,10 @@ export default function Home() {
 				// ];
 
 				arrow.style.transform = 'rotate(' + angle + 'deg)'
+				const modAngle = (angle % 360)
 				document.getElementById('angle-info').textContent =
 					(modAngle.toFixed(2)) + '\u00b0'
-
-					
-				// const modAngle = (angle % 360)
+				
 				// for(var i = 1; i < dict.length; i++){
 				// 	if(modAngle > dict[i-1].max && lastname < dict[i].max){
 				// 		angleLetter.innerHTML = dict[i].dir;
