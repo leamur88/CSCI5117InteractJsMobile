@@ -15,6 +15,13 @@ function dragMoveListener (event) {
 	target.setAttribute('data-y', y)
   }
 
+function reset () {
+	scaleElement.style.transform = 'scale(1)'
+  
+	angleScale.angle = 0
+	angleScale.scale = 1
+  }
+
 
 export default function Pinch() {
 	useEffect(() => {
