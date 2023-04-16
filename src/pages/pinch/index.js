@@ -69,7 +69,7 @@ export default function Pinch() {
 	
 	return (
 		<div id="gesture-area">
-			<img src="https://static.www.nfl.com/image/private/t_headshot_desktop/league/zdstmm4sloqnichybgja" alt="sample image" id="scale-element" />
+			<img src="https://upload.wikimedia.org/wikipedia/commons/archive/e/ea/20110204215237%21Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg" alt="sample image" id="scale-element" />
 		</div>
 	)
 }
