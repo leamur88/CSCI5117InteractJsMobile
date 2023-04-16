@@ -19,3 +19,10 @@
 	left: 1rem;
 	top: 1rem;
   }
+  #angle-direction {
+	color: #666;
+	font-size: 2em;
+	position: absolute;
+	left: 1rem;
+	top: 5rem;
+  }
