@@ -6,7 +6,7 @@ function mod(n, m) {
 }
 
 
-export default function Home() {
+export default function Arrow() {
 	useEffect(() => {
 		var angle = 0
 		// var dir = 'N'
