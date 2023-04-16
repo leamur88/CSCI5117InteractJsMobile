@@ -1,7 +1,9 @@
 import interact from 'interactjs'
 import { useEffect } from 'react'
 
-
+function mod(n, m) {
+	return ((n % m) + m) % m;
+}
 
 
 export default function Home() {
@@ -37,7 +39,7 @@ export default function Home() {
 				];
 
 				arrow.style.transform = 'rotate(' + angle + 'deg)'
-				const modAngle = (angle % 360)
+				const modAngle = mod(angle, 360)
 				console.log(angle, modAngle)
 				document.getElementById('angle-info').textContent =
 					(modAngle.toFixed(2)) + '\u00b0'
@@ -58,7 +60,7 @@ export default function Home() {
 			<div id="angle-info">0°</div>
 			<div id="angle-direction">Direction: <span id="angle-letter">N</span></div>
 			<svg id="arrow" viewBox="0 0 100 100">
-				<polygon points="50,0 75,25 62.5,25 62.5,100 37.5,100 37.5,25 25,25" fill="#29e"></polygon>
+				<polygon points="50,0 75,25 62.5,25 62.5,100 37.5,100 37.5,25 25,25" fill="#57b974"></polygon>
 			</svg>
 		</div>
 	)
