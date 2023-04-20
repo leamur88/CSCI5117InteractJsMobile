@@ -1,6 +1,7 @@
 import interact from 'interactjs'
 import { useEffect } from 'react'
 
+// Same as listener from other repo
 function dragMoveListener (event) {
 	var target = event.target
 	// keep the dragged position in the data-x/data-y attributes
