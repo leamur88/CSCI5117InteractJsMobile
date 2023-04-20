@@ -1,6 +1,7 @@
 import interact from 'interactjs'
 import { useEffect } from 'react'
 
+// Javascript mod function has a known bug... (https://stackoverflow.com/questions/4467539/javascript-modulo-gives-a-negative-result-for-negative-numbers)
 function mod(n, m) {
 	return ((n % m) + m) % m;
 }
@@ -9,7 +10,6 @@ function mod(n, m) {
 export default function Arrow() {
 	useEffect(() => {
 		var angle = 0
-		// var dir = 'N'
 
 		interact('#rotate-area').gesturable({
 		listeners: {
@@ -17,7 +17,9 @@ export default function Arrow() {
 				var arrow = document.getElementById('arrow')
 				var angleLetter = document.getElementById('angle-letter')
 
+				// The change in angle since previous event
 				angle += event.da
+
 				var dict = [
 					{ max: 11.25, dir: 'N' },
 					{ max: 33.75,  dir: 'NNE' },
@@ -39,8 +41,9 @@ export default function Arrow() {
 				];
 
 				arrow.style.transform = 'rotate(' + angle + 'deg)'
+
+				// All of this is simply for the angle and direction being displayed
 				const modAngle = mod(angle, 360)
-				console.log(angle, modAngle)
 				document.getElementById('angle-info').textContent =
 					(modAngle.toFixed(2)) + '\u00b0'
 				
@@ -49,6 +52,7 @@ export default function Arrow() {
 						angleLetter.innerHTML = dict[i].dir;
 					}
 				}
+				console.log(angleLetter.innerHTML)
 			
 			}
 		}
